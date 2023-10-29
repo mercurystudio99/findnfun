@@ -17,7 +17,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 void main() async {
-  // Initialized before calling runApp to init firebase app
   WidgetsFlutterBinding.ensureInitialized();
 
   /// ***  Initialize Firebase App *** ///
