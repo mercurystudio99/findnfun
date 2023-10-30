@@ -24,9 +24,6 @@ void main() async {
   // Initialize Google Mobile Ads SDK
   await MobileAds.instance.initialize();
 
-  /// Update the iOS foreground notification presentation options to allow
-  /// heads up notifications.
-  /// Check iOS device
   if (Platform.isIOS) {
     await FirebaseMessaging.instance
         .setForegroundNotificationPresentationOptions(
