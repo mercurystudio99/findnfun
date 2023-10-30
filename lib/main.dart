@@ -19,10 +19,6 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  /// ***  Initialize Firebase App *** ///
-  /// 👉 Please check the [Documentation - README FIRST] instructions in the
-  /// Table of Contents at section: [NEW - Firebase initialization for Dating App]
-  /// in order to fix it and generate the required [firebase_options.dart] for your app.
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   // Initialize Google Mobile Ads SDK
