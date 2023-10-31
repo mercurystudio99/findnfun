@@ -55,7 +55,6 @@ class MyApp extends StatelessWidget {
           title: APP_NAME,
           debugShowCheckedModeBanner: false,
 
-          /// Setup translations
           localizationsDelegates: const [
             // AppLocalizations is where the lang translations is loaded
             AppLocalizations.delegate,
