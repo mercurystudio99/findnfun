@@ -28,7 +28,6 @@ class VipDialog extends StatelessWidget {
                   color: Theme.of(context).primaryColor,
                   child: Column(
                     children: <Widget>[
-                      /// User image
                       Padding(
                           padding: const EdgeInsets.all(10),
                           child: CircleAvatar(
@@ -87,7 +86,7 @@ class VipDialog extends StatelessWidget {
                         style: const TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold)),
                   ),
-                  const Divider(height: 10, thickness: 1),
+                  const Divider(height: 15, thickness: 1),
 
                   /// VIP Subscriptions
                   StoreProducts(
@@ -95,8 +94,7 @@ class VipDialog extends StatelessWidget {
                     icon: Image.asset('assets/images/crow_badge.png',
                         width: 50, height: 50),
                   ),
-                  const Divider(thickness: 1, height: 30),
-
+                  const Divider(thickness: 1, height: 25),
                   // Show Restore VIP Subscription button
                   Center(
                     child: Column(
