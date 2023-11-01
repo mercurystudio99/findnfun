@@ -54,7 +54,6 @@ class MyApp extends StatelessWidget {
           scaffoldMessengerKey: scaffoldMessengerKey,
           title: APP_NAME,
           debugShowCheckedModeBanner: false,
-
           localizationsDelegates: const [
             // AppLocalizations is where the lang translations is loaded
             AppLocalizations.delegate,
@@ -63,8 +62,6 @@ class MyApp extends StatelessWidget {
             GlobalWidgetsLocalizations.delegate,
           ],
           supportedLocales: SUPPORTED_LOCALES,
-
-          /// Returns a locale which will be used by the app
           localeResolutionCallback: (locale, supportedLocales) {
             // Check if the current device locale is supported
             for (var supportedLocale in supportedLocales) {
