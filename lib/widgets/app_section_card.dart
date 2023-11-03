@@ -25,7 +25,7 @@ class AppSectionCard extends StatelessWidget {
     final i18n = AppLocalizations.of(context);
 
     return Card(
-      elevation: 4.0,
+      elevation: 5.0,
       shape: defaultCardBorder(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,8 +41,8 @@ class AppSectionCard extends StatelessWidget {
             title: Text(i18n.translate("about_us"), style: _textStyle),
             onTap: () {
               /// Go to About us screen
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const AboutScreen()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const AboutScreen()));
             },
           ),
           const Divider(height: 0),
@@ -57,8 +57,8 @@ class AppSectionCard extends StatelessWidget {
           ),
           const Divider(height: 0),
           ListTile(
-            leading:
-                const SvgIcon("assets/icons/star_icon.svg", width: 22, height: 22),
+            leading: const SvgIcon("assets/icons/star_icon.svg",
+                width: 22, height: 22),
             title: Text(
                 i18n.translate(Platform.isAndroid
                     ? "rate_on_play_store"
@@ -71,8 +71,8 @@ class AppSectionCard extends StatelessWidget {
           ),
           const Divider(height: 0),
           ListTile(
-            leading:
-                const SvgIcon("assets/icons/lock_icon.svg", width: 22, height: 22),
+            leading: const SvgIcon("assets/icons/lock_icon.svg",
+                width: 22, height: 22),
             title: Text(i18n.translate("privacy_policy"), style: _textStyle),
             onTap: () async {
               /// Go to privacy policy

@@ -47,14 +47,11 @@ class _MatchesTabState extends State<MatchesTab> {
           svgIconName: 'heart_icon',
           title: _i18n.translate("matches"),
         ),
-
-        /// Show matches
         Expanded(child: _showMatches()),
       ],
     );
   }
 
-  /// Handle matches result
   Widget _showMatches() {
     /// Check result
     if (_matches == null) {
