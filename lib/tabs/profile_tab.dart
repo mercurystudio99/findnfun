@@ -40,18 +40,17 @@ class ProfileTab extends StatelessWidget {
             /// App Section Card
             AppSectionCard(),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 25),
 
             /// Sign out button card
             const SignOutButtonCard(),
 
             const SizedBox(height: 25),
-            
+
             /// Delete Account Button
             const DeleteAccountButton(),
 
             const SizedBox(height: 25),
-
           ],
         );
       }),
