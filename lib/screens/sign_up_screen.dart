@@ -198,7 +198,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Text(_i18n.translate("profile_photo"),
                   textAlign: TextAlign.center),
 
-              const SizedBox(height: 22),
+              const SizedBox(height: 25),
 
               /// Form
               Form(
@@ -224,7 +224,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         return null;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 25),
 
                     /// User gender
                     DropdownButtonFormField<String>(
@@ -250,7 +250,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         return null;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 25),
 
                     /// Birthday card
                     Card(
@@ -269,7 +269,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             _showDatePicker();
                           },
                         )),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 25),
 
                     /// School field
                     TextFormField(
@@ -283,7 +283,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             child: SvgIcon("assets/icons/university_icon.svg"),
                           )),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 25),
 
                     /// Job title field
                     TextFormField(
@@ -297,7 +297,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             child: SvgIcon("assets/icons/job_bag_icon.svg"),
                           )),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 25),
 
                     /// Bio field
                     TextFormField(
@@ -323,7 +323,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     /// Agree terms
                     const SizedBox(height: 5),
                     _agreePrivacy(),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 25),
 
                     /// Sign Up button
                     SizedBox(
