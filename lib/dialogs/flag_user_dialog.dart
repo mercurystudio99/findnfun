@@ -1,4 +1,3 @@
-
 import 'package:dating_app/dialogs/progress_dialog.dart';
 import 'package:dating_app/helpers/app_localizations.dart';
 import 'package:dating_app/main.dart';
@@ -18,7 +17,6 @@ class FlagUserDialog extends StatefulWidget {
 }
 
 class _FlagUserDialogState extends State<FlagUserDialog> {
-  // Variables
   String _selectedFlagOption = "";
   late ProgressDialog _pr;
   late AppLocalizations _i18n;
@@ -185,7 +183,7 @@ class _FlagUserDialogState extends State<FlagUserDialog> {
 
                             // Show success dialog
                             showScaffoldMessage(
-                              message: message, bgcolor: Colors.green);
+                                message: message, bgcolor: Colors.green);
                           },
                   ),
                 ],
