@@ -76,9 +76,7 @@ class BlockedUsersApi {
       // Result
       return true;
     } else {
-      // Debug
       debugPrint('blockUser() -> You already blocked this user');
-      // Result
       return false;
     }
   }
@@ -95,7 +93,6 @@ class BlockedUsersApi {
             .where(BLOCKED_USER_ID, isEqualTo: blockedUserId)
             .get())
         .catchError((e) {
-      // Debug error
       debugPrint('isBlocked() -> error: ${e.toString()}');
       return e;
     });
