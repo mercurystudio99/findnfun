@@ -1,8 +1,8 @@
 import 'dart:io';
+import 'package:flutter/material.dart';
 
 import 'package:dating_app/screens/blocked_account_screen.dart';
 import 'package:dating_app/screens/update_location_sceen.dart';
-import 'package:flutter/material.dart';
 import 'package:dating_app/constants/constants.dart';
 import 'package:dating_app/helpers/app_localizations.dart';
 import 'package:dating_app/helpers/app_helper.dart';
@@ -22,13 +22,10 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  // Variables
   final AppHelper _appHelper = AppHelper();
   late AppLocalizations _i18n;
 
-  /// Navigate to next page
   void _nextScreen(screen) {
-    // Go to next page route
     Future(() {
       Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(builder: (context) => screen), (route) => false);
@@ -54,13 +51,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
       /// Compare both versions
       if (storeVersion > appCurrentVersion) {
-        /// Go to update app screen
         _nextScreen(const UpdateAppScreen());
         debugPrint("Go to update screen");
       } else {
-        /// Authenticate User Account
         UserModel().authUserAccount(
-            updateLocationScreen: () => _nextScreen(const UpdateLocationScreen()),
+            updateLocationScreen: () =>
+                _nextScreen(const UpdateLocationScreen()),
             signInScreen: () => _nextScreen(const SignInScreen()),
             signUpScreen: () => _nextScreen(const SignUpScreen()),
             homeScreen: () => _nextScreen(const HomeScreen()),
