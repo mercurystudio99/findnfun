@@ -23,7 +23,6 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  // Variables
   final _formKey = GlobalKey<FormState>();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   final _nameController =
@@ -32,11 +31,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final _jobController = TextEditingController();
   final _bioController = TextEditingController();
 
-  /// User Birthday info
   int _userBirthDay = 0;
   int _userBirthMonth = 0;
   int _userBirthYear = DateTime.now().year;
-  // End
   DateTime _initialDateTime = DateTime.now();
   String? _birthday;
   File? _imageFile;
@@ -45,7 +42,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final List<String> _genders = ['Male', 'Female'];
   late AppLocalizations _i18n;
 
-  /// Set terms
   void _setAgreeTerms(bool value) {
     setState(() {
       _agreeTerms = value;
