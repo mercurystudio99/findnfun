@@ -21,12 +21,11 @@ class PhoneNumberScreen extends StatefulWidget {
 }
 
 class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
-  // Variables
   final _formKey = GlobalKey<FormState>();
   final _scaffoldkey = GlobalKey<ScaffoldState>();
   final _numberController = TextEditingController();
-  String? _phoneCode = '+1'; // Define yor default phone code
-  final String _initialSelection = 'US'; // Define yor default country code
+  String? _phoneCode = '+1';
+  final String _initialSelection = 'US';
   late AppLocalizations _i18n;
   late ProgressDialog _pr;
 
@@ -58,7 +57,8 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
               ),
               const SizedBox(height: 10),
               Text(_i18n.translate("sign_in_with_phone_number"),
-                  textAlign: TextAlign.center, style: const TextStyle(fontSize: 20)),
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 20)),
               const SizedBox(height: 25),
               Text(
                   _i18n.translate(
@@ -144,11 +144,12 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
         checkUserAccount: () {
           /// Authenticate User Account
           UserModel().authUserAccount(
-            updateLocationScreen: () => _nextScreen(const UpdateLocationScreen()),
-            signUpScreen: () => _nextScreen(const SignUpScreen()),
-            homeScreen: () => _nextScreen(const HomeScreen()),
-            blockedScreen: () => _nextScreen(const BlockedAccountScreen()));
-          // END   
+              updateLocationScreen: () =>
+                  _nextScreen(const UpdateLocationScreen()),
+              signUpScreen: () => _nextScreen(const SignUpScreen()),
+              homeScreen: () => _nextScreen(const HomeScreen()),
+              blockedScreen: () => _nextScreen(const BlockedAccountScreen()));
+          // END
         },
         codeSent: (code) async {
           // Hide progreess dialog
@@ -165,15 +166,16 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
 
           // Check Erro type
           if (errorType == 'invalid_number') {
-              // Check error type
-              final String message =
-                  _i18n.translate("we_were_unable_to_verify_your_number") + "\nError: $msg";
-              // Show error message
-              // Validate context
-              if (mounted) {
-                showScaffoldMessage(
-                    context: context, message: message, bgcolor: Colors.red);
-              }
+            // Check error type
+            final String message =
+                _i18n.translate("we_were_unable_to_verify_your_number") +
+                    "\nError: $msg";
+            // Show error message
+            // Validate context
+            if (mounted) {
+              showScaffoldMessage(
+                  context: context, message: message, bgcolor: Colors.red);
+            }
           }
         });
   }
