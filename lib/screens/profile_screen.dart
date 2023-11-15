@@ -17,13 +17,11 @@ import 'package:scoped_model/scoped_model.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class ProfileScreen extends StatefulWidget {
-  /// Params
   final User user;
   final bool showButtons;
   final bool hideDislikeButton;
   final bool fromDislikesScreen;
 
-  // Constructor
   const ProfileScreen({
     Key? key,
     required this.user,
@@ -37,7 +35,6 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  /// Local variables
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   final AppHelper _appHelper = AppHelper();
   final LikesApi _likesApi = LikesApi();
