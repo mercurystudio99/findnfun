@@ -34,7 +34,6 @@ class _ProfileLikesScreenState extends State<ProfileLikesScreen> {
   late DocumentSnapshot<Map<String, dynamic>> _userLastDoc;
   bool _loadMore = true;
 
-  /// Load more users
   void _loadMoreUsersListener() async {
     _gridViewController.addListener(() {
       if (_gridViewController.position.pixels ==
