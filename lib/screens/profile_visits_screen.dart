@@ -24,7 +24,6 @@ class ProfileVisitsScreen extends StatefulWidget {
 }
 
 class _ProfileVisitsScreenState extends State<ProfileVisitsScreen> {
-  // Variables
   final ScrollController _gridViewController = ScrollController();
   final VisitsApi _visitsApi = VisitsApi();
   late AppLocalizations _i18n;
@@ -86,7 +85,6 @@ class _ProfileVisitsScreenState extends State<ProfileVisitsScreen> {
       }
     });
 
-    /// Listener
     _loadMoreUsersListener();
   }
 
