@@ -20,7 +20,6 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  // Variables
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   late RangeValues _selectedAgeRange;
   late RangeLabels _selectedAgeRangeLabels;
