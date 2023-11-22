@@ -74,7 +74,6 @@ class _SignInScreenState extends State<SignInScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              /// App logo
               const AppLogo(),
               const SizedBox(height: 10),
 
