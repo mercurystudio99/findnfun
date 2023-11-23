@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 class MatchesApi {
   /// Get firestore instance
-  ///
   final _firestore = FirebaseFirestore.instance;
 
   /// Save match

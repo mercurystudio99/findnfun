@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 
 class LikesApi {
   /// FINAL VARIABLES
-  ///
   final _firestore = FirebaseFirestore.instance;
   final _notificationsApi = NotificationsApi();
 

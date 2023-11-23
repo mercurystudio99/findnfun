@@ -1,7 +1,6 @@
 import 'package:dating_app/constants/constants.dart';
 
 class AppInfo {
-  /// Variables
   final int androidAppCurrentVersion;
   final int iosAppCurrentVersion;
   final String androidPackageName;
@@ -14,10 +13,8 @@ class AppInfo {
   final double freeAccountMaxDistance;
   final double vipAccountMaxDistance;
   final int freeAccountMaxActivities;
-  // Custom variables
   final String agoraAppID;
 
-  /// Constructor
   AppInfo({
     required this.androidAppCurrentVersion,
     required this.iosAppCurrentVersion,
@@ -31,11 +28,9 @@ class AppInfo {
     required this.freeAccountMaxDistance,
     required this.vipAccountMaxDistance,
     required this.freeAccountMaxActivities,
-    // Custom variables
     required this.agoraAppID,
   });
 
-  /// factory AppInfo object
   factory AppInfo.fromDocument(Map<String, dynamic> doc) {
     return AppInfo(
       androidAppCurrentVersion: doc[ANDROID_APP_CURRENT_VERSION] ?? 1,
@@ -54,7 +49,6 @@ class AppInfo {
       vipAccountMaxDistance: doc[VIP_ACCOUNT_MAX_DISTANCE] == null
           ? 200
           : doc[VIP_ACCOUNT_MAX_DISTANCE].toDouble(),
-      // Custom variables
       agoraAppID: doc['agora_app_id'] ?? '',
     );
   }

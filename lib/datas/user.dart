@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dating_app/constants/constants.dart';
 
 class User {
-  /// User info
   final String userId;
   final String userProfilePhoto;
   final String userFullname;
@@ -29,10 +28,8 @@ class User {
   final int userTotalDisliked;
   final Map<String, dynamic>? userGallery;
   final Map<String, dynamic>? userSettings;
-  // User Presence variables
   final bool isUserOnline;
 
-  // Constructor
   User({
     required this.userId,
     required this.userProfilePhoto,
@@ -60,11 +57,9 @@ class User {
     required this.userTotalLikes,
     required this.userTotalVisits,
     required this.userTotalDisliked,
-    // User Presence variables
     required this.isUserOnline,
   });
 
-  /// factory user object
   factory User.fromDocument(Map<String, dynamic> doc) {
     return User(
       userId: doc[USER_ID],
@@ -88,12 +83,12 @@ class User {
       userIsVerified: doc[USER_IS_VERIFIED] ?? false,
       userLevel: doc[USER_LEVEL],
       userRegDate: doc[USER_REG_DATE].toDate(), // Firestore Timestamp
-      userLastLogin: doc[USER_LAST_LOGIN]?.toDate() ?? DateTime.now(), // Firestore Timestamp
+      userLastLogin: doc[USER_LAST_LOGIN]?.toDate() ??
+          DateTime.now(), // Firestore Timestamp
       userDeviceToken: doc[USER_DEVICE_TOKEN],
       userTotalLikes: doc[USER_TOTAL_LIKES] ?? 0,
       userTotalVisits: doc[USER_TOTAL_VISITS] ?? 0,
       userTotalDisliked: doc[USER_TOTAL_DISLIKED] ?? 0,
-      // User Presence variables
       isUserOnline: doc['user_is_online'] ?? false,
     );
   }

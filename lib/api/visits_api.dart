@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 
 class VisitsApi {
   /// FINAL VARIABLES
-  ///
   final _firestore = FirebaseFirestore.instance;
   final _notificationsApi = NotificationsApi();
 
