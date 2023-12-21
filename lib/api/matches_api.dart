@@ -4,7 +4,6 @@ import 'package:dating_app/models/user_model.dart';
 import 'package:flutter/material.dart';
 
 class MatchesApi {
-  /// Get firestore instance
   final _firestore = FirebaseFirestore.instance;
 
   /// Save match
