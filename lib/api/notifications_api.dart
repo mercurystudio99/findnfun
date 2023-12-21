@@ -8,12 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class NotificationsApi {
-  /// FINAL VARIABLES
-  ///
-  /// Firestore instance
   final _firestore = FirebaseFirestore.instance;
 
-  /// Save notification in database
   Future<void> saveNotification({
     required String nReceiverId,
     required String nType,
