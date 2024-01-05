@@ -6,8 +6,6 @@ import 'package:dating_app/plugins/geoflutterfire/geoflutterfire.dart';
 import 'package:flutter/material.dart';
 
 class UsersApi {
-  /// Get firestore instance
-  ///
   final _firestore = FirebaseFirestore.instance;
 
   /// Get all users
